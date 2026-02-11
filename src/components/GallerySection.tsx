@@ -1,13 +1,18 @@
 import { motion } from "framer-motion";
-import { Camera } from "lucide-react";
+import gallery1 from "@/assets/gallery-1.jpg";
+import gallery2 from "@/assets/gallery-2.jpg";
+import gallery3 from "@/assets/gallery-3.jpg";
+import gallery4 from "@/assets/gallery-4.jpg";
+import gallery5 from "@/assets/gallery-5.jpg";
+import gallery6 from "@/assets/gallery-6.jpg";
 
 const galleryItems = [
-  { title: "Campeonato Internacional 2024", category: "Competição" },
-  { title: "Seminário de Jiu-Jitsu", category: "Treinamento" },
-  { title: "Graduação de Atletas", category: "Cerimônia" },
-  { title: "Copa FILAM de Muay Thai", category: "Competição" },
-  { title: "Workshop de Defesa Pessoal", category: "Treinamento" },
-  { title: "Encontro Internacional", category: "Evento" },
+  { title: "Campeonato Internacional 2024", category: "Competição", image: gallery1 },
+  { title: "Seminário de Jiu-Jitsu", category: "Treinamento", image: gallery2 },
+  { title: "Graduação de Atletas", category: "Cerimônia", image: gallery3 },
+  { title: "Copa FILAM de Muay Thai", category: "Competição", image: gallery4 },
+  { title: "Workshop de Defesa Pessoal", category: "Treinamento", image: gallery5 },
+  { title: "Encontro Internacional", category: "Evento", image: gallery6 },
 ];
 
 const GallerySection = () => {
@@ -35,10 +40,15 @@ const GallerySection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: i * 0.08 }}
-              className="group relative aspect-video bg-secondary/50 border border-border rounded-sm overflow-hidden hover:border-primary/50 transition-colors"
+              className="group relative aspect-video rounded-sm overflow-hidden"
             >
-              <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-4">
-                <Camera className="w-10 h-10 text-muted-foreground mb-3 group-hover:text-primary transition-colors" />
+              <img
+                src={item.image}
+                alt={item.title}
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
                 <h3 className="font-['Oswald'] text-sm uppercase tracking-wider font-semibold text-foreground">
                   {item.title}
                 </h3>

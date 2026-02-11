@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
+import heroBg from "@/assets/hero-bg.jpg";
 
 const HeroSection = () => {
   return (
@@ -7,9 +8,11 @@ const HeroSection = () => {
       id="inicio"
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
     >
-      {/* Background overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background via-background/80 to-background" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_hsl(0_72%_51%/0.08)_0%,_transparent_70%)]" />
+      {/* Background image */}
+      <div className="absolute inset-0">
+        <img src={heroBg} alt="" className="w-full h-full object-cover" />
+      </div>
+      <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/60 to-background" />
 
       <div className="relative z-10 container mx-auto px-4 text-center">
         <motion.h1

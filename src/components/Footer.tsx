@@ -1,4 +1,4 @@
-
+import logoFilam from "@/assets/logo-filam.gif";
 
 const Footer = () => {
   return (
@@ -6,7 +6,7 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex items-center gap-3">
-            
+            <img src={logoFilam} alt="FILAM" className="h-10 w-auto" />
             <span className="font-['Oswald'] text-lg font-bold uppercase tracking-wider text-foreground">
               FILAM
             </span>
