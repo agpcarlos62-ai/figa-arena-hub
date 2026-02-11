@@ -43,17 +43,17 @@ const ContactSection = () => {
               <MapPin className="w-6 h-6 text-primary mt-1 shrink-0" />
               <div>
                 <h3 className="font-['Oswald'] uppercase tracking-wider text-sm font-semibold mb-1">Localização</h3>
-                <p className="text-muted-foreground">Sede Internacional —
+                <p className="text-muted-foreground">Sede Internacional — 
 Rio de Janeiro, Brasil
-Cubai - Emirados Árabes</p>
+Dubai - Emirados Árabes</p>
               </div>
             </div>
           </motion.div>
 
           <motion.form initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className="space-y-4"
-            onSubmit={(e) => e.preventDefault()}>
+          viewport={{ once: true }}
+          className="space-y-4"
+          onSubmit={(e) => e.preventDefault()}>
 
             <input
               type="text"
