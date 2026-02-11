@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import logoFilam from "@/assets/logo-filam.gif";
+
 
 const navLinks = [
   { label: "Início", href: "#inicio" },
@@ -18,7 +18,7 @@ const Header = () => {
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-md border-b border-border">
       <div className="container mx-auto flex items-center justify-between py-3 px-4">
         <a href="#inicio" className="flex items-center gap-3">
-          <img src={logoFilam} alt="FILAM" className="h-12 w-auto" />
+          
           <span className="font-['Oswald'] text-xl font-bold uppercase tracking-wider text-foreground">
             FILAM
           </span>
