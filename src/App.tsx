@@ -13,11 +13,14 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      {/* O basename abaixo resolve o erro de rota 404 no GitHub Pages */}
+      {/* O basename deve ser exatamente o nome do repositório */}
       <BrowserRouter basename="/figa-arena-hub">
         <Routes>
+          {/* Usamos o caminho relativo para a página inicial */}
+          <Route index element={<Index />} />
           <Route path="/" element={<Index />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+          
+          {/* Rota de captura para páginas não encontradas */}
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
