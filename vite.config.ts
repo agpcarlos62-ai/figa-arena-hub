@@ -1,3 +1,8 @@
+export default defineConfig({
+  base: '/figa-arena-hub/', // O nome do seu repositório entre barras
+  // ... resto das configurações
+})
+  
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
